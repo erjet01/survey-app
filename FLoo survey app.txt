@@ -1,0 +1,68 @@
+ FLoo survey app
+
+- Author
+Armareza Yunizar Prasetya
+
+-Deskripsi Singkat
+Survey App adalah aplikasi sederhana untuk mengumpulkan data kepuasan pelanggan melalui form web.  
+Data yang dikirim akan divalidasi dan disimpan ke database menggunakan Laravel.
+
+- Teknologi yang Digunakan
+ 1.Backend: Laravel
+ 2.Frontend: Blade Template + Tailwind CSS
+ 3.Database: SQLite (default) / MySQL
+ 4.Version Control: Git 
+
+- Fitur Aplikasi
+ 1.Input **nama responden**
+ 2.Pilih **rentang usia**
+ 3.Pilih **jenis kelamin**
+ 4.Skor kepuasan **1–5**
+ 5.Komentar tambahan (opsional)
+ 6.Validasi data di backend
+ 7.Penyimpanan data ke database
+
+- Struktur Database
+
+Tabel: `customer_surveys`
+
+| Kolom 	     | Tipe  	 | Keterangan 	       |
+|--------------------|-----------|---------------------|
+| id                 | bigint    | Primary key 	       |
+| name               | string    | Nama responden      |
+| age_range          | string 	 | Rentang usia        |
+| gender 	     | string    | Jenis kelamin       |
+| satisfaction_score | integer   | Skor kepuasan (1–5) |
+| feedback           | text 	 | Komentar	       |
+| created_at         | timestamp | Waktu dibuat        |
+| updated_at 	     | timestamp | Waktu update        |
+
+
+- Cara Install & Menjalankan Project
+
+1. Clone Repository
+```bash
+git clone https://github.com/erjet01/survey-app.git
+cd survey-app
+
+2.Install Dependency
+composer install
+npm install
+npm run dev
+
+3.Setup Environment
+cp .env.example .env
+php artisan key:generate
+
+4.Database & Migration
+php artisan migrate
+
+5.Jalankan Server
+php artisan serve
+Akses di browser:
+
+http://127.0.0.1:8000
+
+
+
+
