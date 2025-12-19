@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Survei Kepuasan</title>
+    @if(!app()->runningUnitTests())
     @vite('resources/css/app.css')
+@endif
+
 </head>
 <body class="bg-gray-100 font-sans">
 
